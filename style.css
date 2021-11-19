@@ -30,6 +30,7 @@ input[type=button] {
   background-color: DodgerBlue;
   color: #fff;
   cursor: pointer;
+  
 }
 
 .autocomplete-items {
@@ -67,8 +68,8 @@ input[type=button] {
 #doc1{
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
- 
   background-color: rgb(182, 182, 182);
   width: 25vw;
   height: 70vh;
@@ -76,12 +77,22 @@ input[type=button] {
   border-radius: 20px;
 }
 
-#icon img{
-  position: relative;
-  top: 10vh;
+strong{
+  font-size: large;
+}
+
+.icon img{
+  
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  
+  
+}
+
+p{
+  text-align: center;
+  
 }
 
 #details{
@@ -91,7 +102,10 @@ input[type=button] {
 
 
 #doc2{
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: rgb(148, 148, 148);
   width: 25vw;
   height: 70vh;
@@ -99,6 +113,10 @@ input[type=button] {
   border-radius: 20px;
 }
 #doc3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: rgb(182, 182, 182);
   width: 25vw;
   height: 70vh;
