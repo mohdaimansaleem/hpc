@@ -142,8 +142,12 @@ function clicked(){
 
   }
 
-  let det="\n DOCTOR NAME : "+docs[dept]["doc1"]["name"]+"\n"+docs[dept]["doc1"]["des"]+"\n"+docs[dept]["doc1"]["exp"]+"years exp\n";
-  document.getElementById("details").innerText=det;
+  let det1="\n DOCTOR NAME : "+docs[dept]["doc1"]["name"]+"\n"+docs[dept]["doc1"]["des"]+"\n"+docs[dept]["doc1"]["exp"]+"years exp\n";
+  document.getElementById("details1").innerText=det1;
+  let det2="\n DOCTOR NAME : "+docs[dept]["doc2"]["name"]+"\n"+docs[dept]["doc2"]["des"]+"\n"+docs[dept]["doc2"]["exp"]+"years exp\n";
+  document.getElementById("details2").innerText=det2;
+  let det3="\n DOCTOR NAME : "+docs[dept]["doc3"]["name"]+"\n"+docs[dept]["doc3"]["des"]+"\n"+docs[dept]["doc3"]["exp"]+"years exp\n";
+  document.getElementById("details3").innerText=det3;
   
 
 }
