@@ -2,8 +2,8 @@
     
 #nav{
 height: 18vh;
-    
 }
+
 .clg{
 height: auto;
 width: 300px;
@@ -13,8 +13,8 @@ width: 300px;
 width:85vw;
 height: 72vh;
 margin-bottom: 10vh;
-    
 }
+
 label h3{
 font-size: medium;
 }
@@ -23,41 +23,48 @@ input{
 width: 200px;
 height: 40px;
 }
-#btn{
-font-size: medium;
-}
-#btn2{
-font-size: medium;
-}
+
 
 .logo{
 width: 150px;
 height: auto;  
 }
 
-#mapbox{
-    width: 100vw;
-}
-
-#btn2{
-    width:110px;
-    
-}
-
-#btn3{
-    width:110px;
-    
-}
-
-#map{
-    width: 90vw;
-}
-
-.modal-content {
+.icon img{
   
-    width: 90vw;
-   
+    width: 95px;
+    height: 95px;
+    
+
+    
   }
+#docs{
+flex-direction:column;
+overflow: scroll;    
+}
+
+#doc1{
+width: 100vw;
+height: 50vh;
+border-radius: 0px;   
+}
+
+#doc2{
+width: 100vw;
+height: 50vh;
+border-radius: 0px;   
+    
+}
+
+
+#doc3{
+width: 100vw;
+height: 50vh;
+border-radius: 0px;         
+}
+
+
+
 #footer div{
 height: 10vh;
 }
@@ -108,51 +115,40 @@ height: 10vh;
             width: 250px;
             height: 40px;
         }
-        #btn{
-        font-size: medium;
-        }
-        #btn2{
-        font-size: medium;
-        }
+       
         
         .logo{
             width: 200px;
         height: auto;  
         }
-        #mapbox{
+        #docs{
+            flex-direction:column;
+            overflow: scroll;    
+            }
+            
+        #doc1{
             width: 100vw;
+            height: 50vh;
+            border-radius: 0px;   
+            }
             
-        }
-
-        #btn2{
-            width:110px;
+            #doc2{
+            width: 100vw;
+            height: 50vh;
+            border-radius: 0px;   
+            }
             
-        }
-        
-        #btn3{
-            width:110px;
+            #doc3{
+            width: 100vw;
+            height: 50vh;
+            border-radius: 0px;         
+            }
+
             
-        }
+#footer div{
+    height: 10vh;
+    }
         
-        #map{
-            width: 90vw;
-        }
-
-        .modal-content {
-  
-            width: 90vw;
-           
-          }
-        
-        #footer div{
-        height: 10vh;
-        }
-
-
-    
-    
-
-  
 }
 
 @media only screen and (min-width:520px) and (max-width:720px){
@@ -173,6 +169,29 @@ height: 10vh;
         margin-bottom: 10vh;
         
     }
+
+    #docs{
+        flex-direction:column;
+        overflow: scroll;    
+        }
+        
+    #doc1{
+        width: 100vw;
+        height: 50vh;
+        border-radius: 0px;   
+        }
+        
+        #doc2{
+        width: 100vw;
+        height: 50vh;
+        border-radius: 0px;   
+        }
+        
+        #doc3{
+        width: 100vw;
+        height: 50vh;
+        border-radius: 0px;         
+        }
     label h3{
     font-size: medium;
     }
@@ -181,40 +200,11 @@ height: 10vh;
         width: 250px;
         height: 40px;
     }
-    #btn{
-    font-size: medium;
-    }
-    #btn2{
-    font-size: medium;
-    }
-    
-    #mapbox{
-        width: 100vw;
-    }
-
-    #btn2{
-        width:110px;
-        
-    }
-    
-    #btn3{
-        width:110px;
-        
-    }
-    
-    #map{
-        width: 90vw;
-    }
     .logo{
     width: 200px;
     height: auto;  
     }
 
-    .modal-content {
-  
-        width: 90vw;
-       
-      }
     
     #footer div{
     height: 10vh;
@@ -252,33 +242,37 @@ height: 10vh;
         height: 40px;
        
     }
-    #btn{
-    font-size: larger;
+
+    strong{
+        font-size: large;
     }
-    #btn2{
-    font-size: larger;
+    .icon{
+        position: relative;
+        bottom: 10vh;
     }
-    
-    #btn3{
-        font-size: larger;  
-    }
-    #btn2{
-        width:150px;
+   
+    #docs{
+        flex-direction:row;
+        overflow: scroll;    
+        }
         
-    }
-    
-    #btn3{
-        width:150px;
+    #doc1{
+        width: 33vw;
+        height: 90vh;
+        border-radius: 0px;   
+        }
         
-    }
-    #mapbox{
-        width: 100vw;
-    }
-    
-    #map{
-        width: 90vw;
-    }
-    
+        #doc2{
+        width: 33vw;
+        height:90vh;
+        border-radius: 0px;   
+        }
+        
+        #doc3{
+        width: 33vw;
+        height:90vh;
+        border-radius: 0px;         
+        }
     .logo{
     width: 200px;
     height: auto;  
