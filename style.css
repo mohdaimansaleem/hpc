@@ -1,17 +1,45 @@
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 body {
-  font: 16px Arial;  
+ font: 16px Arial;  
 }
 
 .autocomplete {
-  position: relative;
-  display: inline-block;
-  width: 300px;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ width: 300px;
+}
+
+.autocomplete-items {
+ position: absolute;
+ border: 1px solid #d4d4d4;
+ border-bottom: none;
+ border-top: none;
+ z-index: 99;
+ top: 100%;
+ left: 0;
+ right: 0;
+}
+
+.autocomplete-items div {
+ padding: 10px;
+ cursor: pointer;
+ background-color: #fff; 
+ border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+ background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
 }
 
 input {
@@ -20,74 +48,99 @@ input {
   padding: 10px;
   font-size: 16px;
 }
-
-input[type=text] {
-  background-color: #f1f1f1;
+ 
+ input[type=text] {
+  background-color: #ffffff;
   width: 100%;
 }
-
-input[type=button] {
+ 
+ input[type=button] {
   background-color: DodgerBlue;
   color: #fff;
   cursor: pointer;
-  
+  width: 300px;
+   
 }
 
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
+#maindiv{
+  width: 25vw;
+  height: 80vh;
+  display: flex;
+  margin: auto;
+  background-image:url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;       
 }
-
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
-}
-
-/*when hovering an item:*/
-.autocomplete-items div:hover {
-  background-color: #e9e9e9; 
-}
-
+ 
 #docs{
-  display: none;
-  height: 90vh;
-  background-color: gainsboro;
-  flex-direction: row;
-  
+ display: none;
+ height: 100vh;
+ background-color: rgb(214, 214, 214);
+ flex-direction: row; 
 }
 
 #doc1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(182, 182, 182);
-  width: 25vw;
-  height: 70vh;
-  margin: auto;
-  border-radius: 20px;
+ border: 2px solid black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ background-color: rgb(255, 255, 255);
+ width: 25vw;
+ height: 80vh;
+ margin: auto;
+ border-radius: 20px;
+}
+
+#doc2{
+ border: 2px solid black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ background-color: rgb(255, 255, 255);
+ width: 25vw;
+ height: 80vh;
+ margin: auto;
+ border-radius: 20px;
+}
+
+#doc3{
+ border: 2px solid black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ background-color: rgb(255, 255, 255);
+ width: 25vw;
+ height: 80vh;
+ margin: auto;
+ border-radius: 20px;
+}
+
+button{
+ padding: 10vh 8vh;
+ background-color: rgb(255, 255, 255);
+ border-radius: 10px;
+ border: none;
+
 }
 
 strong{
-  font-size: large;
+ font-size: large;
 }
 
 .icon img{
-  
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  
-  
+ width: 180px;
+ height: 180px;
+ border-radius: 50%;
+ position: relative;
+ left: 1.5vw;
+ bottom: 11vh;
 }
 
 p{
@@ -95,206 +148,185 @@ p{
   
 }
 
-#details{
+#box{
+  display: none;
+  flex-direction: row;
+  position: relative;
+  height: 88vh;
+  width: 98vw;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+}
+
+
+#box1{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 82vh;
+  background-color: rgb(255, 255, 255);
+}
+
+#box2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30vw;
-  height: 30vh;
+  height: 82vh;
+  background-color: rgb(255, 255, 255);
 }
 
-
-#doc2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(148, 148, 148);
-  width: 25vw;
-  height: 70vh;
-  margin: auto;
-  border-radius: 20px;
-}
-#doc3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(182, 182, 182);
-  width: 25vw;
-  height: 70vh;
-  margin: auto;
-  border-radius: 20px;
-}
-/*when navigating through the items using the arrow keys:*/
-.autocomplete-active {
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
+#name{
+ width: 30vw;
+ height: 6vh;
+ border-radius: 20px;
+ background-color: white;
+ text-transform: uppercase; 
+ border-color: rgb(126, 226, 243);
 }
 
+#pname{
+ width: 30vw;
+ height: 6vh;
+ border-radius: 20px;
+ background-color: white;
+ text-transform: uppercase; 
+ border-color: rgb(126, 226, 243);
+}
 
 #nav{
-background-color: rgb(255, 255, 255);
-display: flex;
-align-items: center;
-justify-content: center;
-height: 18vh;
+ background-color: rgb(255, 255, 255);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 18vh;
 }
 
-.clg{
+.nav{
 height: 13vh;
 width: auto;
 }
-
-#maindiv{
-width: 25vw;
-height: 80vh;
-display: flex;
-margin: auto;
-background-image:url("background.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-border-radius: 30px;
-justify-content: center;
-align-items: center;
-margin-bottom: 10vh;
-        
-}
-       
+      
 label h3{
-text-align: center;
-margin-bottom: 2vh;
-margin-top: 50px;
-font-size: larger;
-color: rgb(255, 255, 255);
-font-weight: bolder;
-        
+ text-align: center;
+ margin-bottom: 2vh;
+ margin-top: 50px;
+ font-size: larger;
+ color: rgb(255, 255, 255);
+ font-weight: bolder;      
 }
 
 input{
-width: 20vw;
-height: 6vh;
-text-align: center;
-font-weight: bold;
-margin-top: 2vh;
-text-transform: uppercase;
-    
+ width: 30vw;
+ height: 6vh;
+ text-align: center;
+ font-weight: bold;
+ margin-top: 2vh;
+ text-transform: uppercase; 
+ background-color: rgb(167, 164, 164);  
 }
 
 .input{
-display: flex;
-flex-direction: column;   
-}
-
-#btn{
-background-color:rgb(23, 70, 73);
-color: white;
-border-color: rgb(255, 248, 248);
-font-size: medium;
-font-weight: bold;
-    
-}
-
-#btn:hover{
-background-color: rgb(10, 100, 70);
-border-color: rgb(255, 248, 248);
-cursor: pointer;
+ display: flex;
+ flex-direction: column;   
 }
 
 .logo{
-display: flex;
-background-attachment: fixed;
-align-self: center;
-border-radius: 50%;
-width: 25vh;
-height: auto;
-}
-
-#footer div{
-background-color: rgb(241, 241, 241);
-height: 10vh;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-}
-
-#mapbox{
-display: none;
-flex-direction: column;
-height: 90vh;
-background-color: rgb(212, 212, 218);
-}
-
-#map{
-width: 90vw;
-height: 80vh;
-position: relative;
-margin: auto;
-top: 2vh;
-z-index: 3;
+ display: flex;
+ align-self: center;
+ border-radius: 50%;
+ width: 25vh;
+ height: auto;
 }
 
 form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 
-#bttns{
-height: 10vh;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-#btn2{
-position: relative;
-top: 1vh;
-width: 15vw;
-border-radius: 2%;
-background-color:rgb(122, 196, 128);
-color: white;
-border-color: rgb(255, 248, 248);
-font-size: medium;
-font-weight: bold;
-height: 5vh;
-border-radius: 20px;
-margin-right: 20px;
-        
-}
-
-#btn2:hover{
-background-color: rgb(10, 100, 70);
-border-color: rgb(255, 248, 248);
-cursor: pointer;
-
-}
-
-#btn3{
-position: relative;
-top: 1vh;
-width: 15vw;
-border-radius: 2%;
-background-color:#318abe;
-color: white;
-border-color: rgb(255, 248, 248);
-font-size: medium;
-font-weight: bold;
-height: 5vh;
-border-radius: 20px;
-margin-right: 20px;
-            
-}
-    
-#btn3:hover{
-background-color: #24648a;;
-border-color: rgb(255, 248, 248);
-cursor: pointer;
-    
+#footer div{
+ background-color: rgb(241, 241, 241);
+ height: 10vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
 }
 
 p{
-font-size: medium;
-text-align: center;
+ font-size: medium;
+ text-align: center;
 }
+
+#name{
+  border:2px solid black;
+  border-radius: 0px;
+}
+
+#pname{
+  border:2px solid black;
+  border-radius: 0px;
+}
+
+#submit{
+  width: 10vw;
+  background-color: rgb(115, 115, 192);
+  border-radius: 20px;
+  border:2px solid black;
+}
+
+#number{
+  border-radius: 20px;
+  background-color: white;
+  border:2px solid black;
+  border-radius: 0px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  z-index: 100;
+}
+
+/* Modal Content */
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40vw;
+  height: 30vh;
+ 
+}
+
+#body{
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
 
 
 /* The Modal (background) */
@@ -343,13 +375,3 @@ h5{
   text-decoration: none;
   cursor: pointer;
 }
-
-#body{
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
-  }
