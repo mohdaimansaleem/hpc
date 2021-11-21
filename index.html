@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <title>PROTOTYPE</title>
@@ -17,7 +16,7 @@
     <header id="header">
         <nav id="nav">
             <div>
-                <a href="/index.html"><img class="clg" src="sreenidhi-logo.png" alt="logo"></a>
+                <a href="/index.html"><img class="nav" src="sreenidhi-logo.png" alt="logo"></a>
             </div>
         </nav>
     </header>
@@ -25,7 +24,7 @@
         <div id="maindiv">
             <div class="input">
                 <img src="doctor.jpg" class="logo" alt="doctor icon">
-                <label for="search">
+                <label for="myInput">
                     <h3>ENTER DATA</h3>
                 </label>
                 <form autocomplete="off" action="">
@@ -41,75 +40,56 @@
         </div>
 
 
-
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h5>
-                    PROJECT 02
-                </h5>
-                <hr>
-                <b>
-                    <p id="usertext"></p>
-                </b>
-            </div>
-
-        </div>
-
-
         <div id="docs">
 
             <div id="doc1">
+                <button onclick="doc1()">
+                    <div class="icon">
+                        <img src="icon.jpg" alt="">
 
-                <div class="icon">
-                    <img src="icon.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <strong id="details1"></strong>
 
-                </div>
-                <div >
-                 <p>
-                    <strong id="details1">
-
-                    </strong>
-                </p> 
-                </div>
-
+                            </strong>
+                        </p>
+                    </div>
+                </button>
 
             </div>
 
             <div id="doc2">
+                <button onclick="doc2()">
+                    <div class="icon">
+                        <img src="icon.jpg" alt="">
 
-                <div class="icon">
-                    <img src="icon.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            <strong id="details2">
 
-                </div>
-                <div >
-                  <p>
-                    <strong id="details2">
-
-                    </strong>
-                </p> 
-                </div>
-
+                            </strong>
+                        </p>
+                    </div>
+                </button>
 
             </div>
 
             <div id="doc3">
+                <button onclick="doc3()">
+                    <div class="icon">
+                        <img src="icon.jpg" alt="">
 
-                <div class="icon">
-                    <img src="icon.jpg" alt="">
+                    </div>
+                    <div>
+                        <p> <strong id="details3">
 
-                </div>
-                <div >
-                   <p> <strong id="details3">
+                            </strong>
+                        </p>
 
-                    </strong>
-                </p> 
-
-                </div>
-
+                    </div>
+                </button>
             </div>
 
 
@@ -118,6 +98,64 @@
 
 
     </main>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h5>
+                <strong> DOCTOR </strong>
+            </h5>
+            <br>
+            <hr>
+            <b>
+                <p id="usertext"></p>
+            </b>
+        </div>
+
+    </div>
+
+    <div id="box">
+
+        <div id="box1">
+
+
+            <form action="" id="form">
+                <strong>
+                    <h4>ENTER THE FOLLOWING DETAILS</h4> <br>
+                </strong>
+                <input type="text" name="name" id="name" value="" placeholder="ENTER NAME" autocomplete="off" required>
+                <input type="text" name="pname" id="pname" value="" placeholder="ENTER NAME" autocomplete="off"
+                    required>
+                <input type="number" name="number" id="number" value="" placeholder="ENTER MOBILE NUMBER"
+                    autocomplete="off" requireds>
+            </form>
+            <input type="submit" value="submit" id="submit" onclick="valid()">
+
+        </div>
+
+        <div id="box2">
+            <div id="docf">
+
+                <div class="icon">
+                    <img src="icon.jpg" alt="">
+
+                </div>
+                <div>
+                    <p>
+                        <strong id="details"></strong>
+
+                        </strong>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
     <footer id="footer">
 
         <div>
